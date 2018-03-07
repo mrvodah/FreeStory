@@ -1,0 +1,64 @@
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:background="#afaf92"
+        app:cardCornerRadius="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="120dp"
+                android:background="#60cc92"/>
+
+            <RelativeLayout
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:maxWidth="170dp"
+                    android:textStyle="bold"
+                    android:textColor="#56605e"
+                    android:textSize="17sp"
+                    android:text="title"
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:textStyle="italic"
+                    android:text="content"
+                    android:layout_below="@id/tv_title"
+                    android:id="@+id/tv_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:id="@+id/iv_des"
+                    android:layout_width="85dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentRight="true"
+                    android:src="#9d9da7"
+                    android:contentDescription="image"
+                    android:scaleType="fitXY"
+                    android:textAlignment="gravity" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
