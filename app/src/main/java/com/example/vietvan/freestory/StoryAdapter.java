@@ -1,6 +1,7 @@
 package com.example.vietvan.freestory;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,11 +52,15 @@ public class StoryAdapter extends BaseAdapter {
         TextView title = view.findViewById(R.id.tv_title);
         TextView content = view.findViewById(R.id.tv_content);
         ImageView image = view.findViewById(R.id.iv_des);
+        ImageView iv_ismark = view.findViewById(R.id.iv_ismark);
 
         title.setText(list.get(i).title);
         content.setText(list.get(i).author);
         Picasso.with(context).load(list.get(i).image).into(image);
-
+        if(list.get(i).bookmark == 1)
+            iv_ismark.setBackgroundColor(Color.YELLOW);
+        else
+            iv_ismark.setBackgroundColor(Color.parseColor("#60cc92"));
         return view;
 
     }

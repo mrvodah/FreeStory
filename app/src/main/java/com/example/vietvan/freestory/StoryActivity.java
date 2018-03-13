@@ -32,7 +32,6 @@ public class StoryActivity extends AppCompatActivity {
                 getAssets(), "ahsley.ttf");
         content.setTypeface(typeface2);
 
-//        Html.fromHtml(story.title);
         title.setText(story.title);
         content.setText(story.content.replaceAll("\\\\n", "\n"));
         author.setText(story.author);

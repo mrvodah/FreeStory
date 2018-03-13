@@ -16,6 +16,7 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:id="@+id/iv_ismark"
                 android:layout_width="5dp"
                 android:layout_height="120dp"
                 android:background="#60cc92"/>
@@ -50,7 +51,7 @@
                     android:layout_alignParentRight="true"
                     android:src="#9d9da7"
                     android:contentDescription="image"
-                    android:scaleType="fitXY"
+                    android:scaleType="centerCrop"
                     android:textAlignment="gravity" />
 
             </RelativeLayout>

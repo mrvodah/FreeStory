@@ -23,11 +23,17 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Intent intent = new Intent(MainActivity.this, StoryActivity.class);
+                Intent intent = new Intent(MainActivity.this, DescriptionActivity.class);
                 intent.putExtra("topic", DataBaseManager.get(MainActivity.this).getListStory().get(i));
+                intent.putExtra("pos", i);
                 startActivity(intent);
             }
         });
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        listView.setAdapter(new StoryAdapter(this));
     }
 }

@@ -1,5 +1,6 @@
 package com.example.vietvan.freestory;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -43,6 +44,14 @@ public class DataBaseManager {
         Log.d(TAG, "getListStory: " + list);
 
         return list;
+    }
+
+    public void updateMark(Story story, int mark){
+        sqLiteDatabase = assetHelper.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("bookmark", mark);
+
+        sqLiteDatabase.update(TABLE_NAME, values, "id = ?", new String[]{String.valueOf(story.id)});
     }
 
 }
